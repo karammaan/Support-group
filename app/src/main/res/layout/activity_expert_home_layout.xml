@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:background="#ccc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b1daa0a0"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#c1cccccc"
+            android:id="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/menu"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:id="@+id/menu_icon"
+                android:onClick="open_drawer"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOINED GROUPS"
+                android:textColor="#000"
+                android:layout_toRightOf="@+id/menu_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:background="@drawable/rounder_rec"
+            android:layout_width="match_parent"
+            android:backgroundTint="#bdffffff"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="20dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:id="@+id/group_name_id"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:id="@+id/group_cause_id"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:id="@+id/group_description_id"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHAT"
+                android:textColor="#000"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:id="@+id/chat"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grad_rec"
+        android:layout_gravity="left"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Profile"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@drawable/rounder_rec"
+                        android:layout_marginRight="20dp"
+                        android:padding="10dp"
+                        android:onClick="open_profile"
+                           android:layout_marginTop="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/profile_layout"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:onClick="share_app"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounder_rec"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/profile_layout"
+                        android:id="@+id/share_id"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rate"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@drawable/rounder_rec"
+                        android:layout_marginRight="20dp"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/share_id"
+                        android:id="@+id/rate_id"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feedback"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:background="@drawable/rounder_rec"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:onClick="open_feedback"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/rate_id"
+                        android:id="@+id/feedback_id"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Out"
+                        android:textColor="#000"
+                        android:background="@drawable/rounder_rec"
+                        android:layout_marginRight="20dp"
+                        android:textSize="20dp"
+                        android:onClick="sign_out"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@id/feedback_id"
+                        android:id="@+id/signout_id"/>
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

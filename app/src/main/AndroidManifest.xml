@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tech.karam.demo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/support_logo"
+        android:label="Support Group"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name="com.tech.karam.demo.splash_layout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tech.karam.demo.login_layout" />
+        <activity android:name="com.tech.karam.demo.home_layout" />
+        <activity android:name="com.tech.karam.demo.sign_up_layout" />
+        <activity android:name="com.tech.karam.demo.verify_layout" />
+        <activity android:name="com.tech.karam.demo.Signup_details" />
+        <activity android:name="com.tech.karam.demo.profile_edit_layout" />
+        <activity android:name="com.tech.karam.demo.all_group" />
+        <activity android:name="com.tech.karam.demo.my_groups" />
+        <activity android:name="com.tech.karam.demo.Show_groups" />
+        <activity android:name="com.tech.karam.demo.Group_chat" />
+        <activity android:name="com.tech.karam.demo.expert_signup" />
+        <activity android:name="com.tech.karam.demo.expert_verify_layout" />
+        <activity android:name="com.tech.karam.demo.expert_signup_details" />
+        <activity android:name="com.tech.karam.demo.expert_signup_detail_2" />
+        <activity android:name="com.tech.karam.demo.expert_login_layout" />
+        <activity android:name="com.tech.karam.demo.expert_home_layout" />
+        <activity android:name="com.tech.karam.demo.expert_profile_update" />
+        <activity android:name="com.tech.karam.demo.user_forgot_password" />
+        <activity android:name="com.tech.karam.demo.Expert_groups" />
+        <activity android:name="com.tech.karam.demo.forgot_password_user_verify" />
+        <activity android:name="com.tech.karam.demo.new_password_user" />
+        <activity android:name="com.tech.karam.demo.send_feedback" />
+        <activity android:name="com.tech.karam.demo.expert_forgot_password" />
+        <activity android:name="com.tech.karam.demo.forgot_password_expert_verify" />
+        <activity android:name="com.tech.karam.demo.new_password_expert" />
+        <activity android:name="com.tech.karam.demo.expert_feedback" />
+    </application>
+
+</manifest>

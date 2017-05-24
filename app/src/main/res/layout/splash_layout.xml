@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tech.karam.demo.splash_layout"
+    android:background="@drawable/hand"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_rect"
+       >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUPPORT GROUP"
+        android:textSize="30dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/first_text" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anything is possible when you have"
+        android:textSize="15dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/first_text"
+        android:id="@+id/sec_text"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="the right people there to support you."
+        android:textSize="15dp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sec_text"
+        android:id="@+id/third_text"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/third_text"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="HELP/ SUPPORT/ ADVICE/ GUIDANCE"
+        android:id="@+id/guidance_id"
+
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guidance_id"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Experts Login/Signup"
+            android:textSize="20dp"
+            android:textColor="#401111"
+            android:id="@+id/expert_id"
+            />
+        <View
+            android:layout_width="190dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/expert_id"
+            android:background="#fff"
+            android:id="@+id/expert_view"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expert_view"
+            android:layout_marginTop="10dp"
+            android:id="@+id/expert_layout__id">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN"
+                    android:textColor="#000"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounder_rec"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="login"
+                    android:id="@+id/expert_login"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIGN UP"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounder_rec"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:onClick="signup"
+                    android:id="@+id/expert_signup"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expert_layout__id"
+            android:text="User Login/Signup"
+            android:textColor="#401111"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:id="@+id/user_text_id"/>
+        <View
+            android:layout_width="170dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/user_text_id"
+            android:background="#fff"
+            android:id="@+id/user_view"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_view"
+            android:layout_marginTop="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        >
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="LOGIN"
+         android:textColor="#000"
+         android:layout_weight="1"
+         android:background="@drawable/rounder_rec"
+         android:textSize="20dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:onClick="login"
+         android:id="@+id/button_login"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_rec"
+            android:layout_marginRight="10dp"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:onClick="signup"
+            android:id="@+id/button_signup"
+             />
+    </LinearLayout>
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

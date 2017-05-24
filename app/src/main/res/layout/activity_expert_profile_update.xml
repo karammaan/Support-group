@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/group_discussing"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c3e7a0a0">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cartoon"
+        android:background="@drawable/rounded_rect"
+        android:id="@+id/image_edit"
+        android:onClick="select_image"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="upload"
+        android:textSize="10dp"
+        android:background="@drawable/create_group"
+        android:textColor="#000"
+        android:layout_toRightOf="@+id/image_edit"
+        android:layout_margin="20dp"
+        android:id="@+id/upload_image"
+        android:onClick="upload"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/image_edit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_rect"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/user"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:id="@+id/name_id"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_rect"
+                android:padding="15dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/mail"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:id="@+id/email_id"
+                    android:layout_marginLeft="20dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_rect"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/users"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Gender"
+                    android:id="@+id/gender_id"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_rect"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/smartphone_call"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:id="@+id/mobile_id"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_rect"
+                android:padding="15dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/bio"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Expert in field"
+                    android:textColor="#000"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:id="@+id/expertt_id"
+                    android:layout_marginLeft="20dp"/>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:text="update"
+                android:textSize="15dp"
+                android:background="@drawable/rounded_rect"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:id="@+id/done_button"
+                android:onClick="update_profile"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

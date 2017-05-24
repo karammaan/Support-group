@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_groups"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_discussing"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bbdc5d87">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Group"
+            android:textColor="#fff"
+            android:textSize="40dp"
+            android:layout_marginTop="80dp"
+            android:textStyle="italic"
+           android:layout_marginLeft="20dp"
+            android:id="@+id/add_group_id"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/add_group_id"
+        android:hint="Group Name"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#000"
+        android:background="#fff"
+        android:imeOptions="actionNext"
+        android:id="@+id/first_edit_text"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Group Cause"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#000"
+        android:background="#fff"
+        android:layout_below="@+id/first_edit_text"
+        android:id="@+id/second_edit_text"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Description"
+        android:textColor="#000"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#000"
+        android:background="#fff"
+        android:imeOptions="actionDone"
+        android:layout_below="@+id/second_edit_text"
+        android:id="@+id/third_edit_text"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Group"
+        android:layout_below="@id/third_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/create_button"
+        android:onClick="button"
+        android:background="@drawable/create_group"
+        android:padding="5dp"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

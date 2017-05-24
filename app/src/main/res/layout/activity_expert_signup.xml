@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/handd"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b0351717">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/rounder_rec"
+
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/first_edit_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOBILE NUMBER"
+            android:textSize="20dp"
+            android:textColor="#4d0c0c"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/first_text"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/first_text"
+            android:background="#e9d1d1"
+            android:layout_margin="15dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/smartphone_call"
+                android:id="@+id/mobile_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter Mobile Number"
+                android:layout_toRightOf="@id/mobile_image"
+                android:inputType="phone"
+                android:textColor="#000"
+                android:imeOptions="actionDone"
+                android:textColorHint="#000"
+                android:maxLength="10"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:id="@+id/mobile_id"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_edit_text"
+        android:layout_centerHorizontal="true"
+        android:text="VERIFY"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:background="@drawable/create_group"
+        android:layout_marginTop="20dp"
+        android:onClick="verify_button"
+        android:id="@+id/verify_login"
+        />
+
+
+
+
+
+</RelativeLayout>
+

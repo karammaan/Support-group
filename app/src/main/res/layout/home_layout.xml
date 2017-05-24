@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:background="@drawable/groupbackimage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c1cccccc"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#c1cccccc"
+            android:id="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:id="@+id/menu_icon"
+            android:onClick="open_drawer"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOINED GROUPS"
+                android:textColor="#000"
+                android:layout_toRightOf="@+id/menu_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/joined_group_recycler"
+            android:layout_below="@+id/toolbar"
+            android:background="#b1e7a0a0"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/plus"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="40dp"
+            android:onClick="button_press"
+            android:id="@+id/image_button"
+            />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_layout_id"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@drawable/grad_rec"
+        android:onClick="edit_profile_layout"
+        android:id="@+id/profile_layout"
+       >
+
+       <ImageView
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:src="@drawable/cartoon"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="20dp"
+
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="profile"
+            android:textColor="#fff"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+
+            />
+    </LinearLayout>
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/profile_layout_id"
+        android:background="#afffffff"
+        android:id="@+id/sec_layout"
+        >
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sec_layout"
+        android:id="@+id/third_layout"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/grad_rec"
+        android:onClick="open_all_groups"
+        android:clickable="true"
+        android:id="@+id/all_groups_layout"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/house"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All groups"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+
+
+            />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/third_layout"
+            android:background="#afffffff"
+            android:id="@+id/all_group_layout"
+            >
+
+        </View>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/third_layout"
+            android:id="@+id/third_layout2"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:background="@drawable/grad_rec"
+                android:onClick="open_expert_groups"
+                android:clickable="true"
+                android:id="@+id/expert_groups_layout"
+
+                >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cards"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expert groups"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/third_layout2"
+        android:background="#fff"
+        android:id="@+id/home_layout"
+        >
+    </View>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/third_layout2"
+        android:id="@+id/fourth_layout"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/grad_rec"
+            android:clickable="true"
+            android:onClick="open_groups"
+            android:id="@+id/my_group_layout"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/network"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Group"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/fourth_layout"
+        android:background="#fff"
+        android:id="@+id/group_layout"
+        >
+
+    </View>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group_layout"
+        android:id="@+id/rate_layout"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/grad_rec"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/star"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/rate_layout"
+        android:background="#fff"
+        android:id="@+id/rate_view_layout"
+        >
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rate_layout"
+       android:id="@+id/share_layout"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:onClick="share_app"
+            android:background="@drawable/grad_rec"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/share"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/share_layout"
+        android:background="#b2ffffff"
+        android:id="@+id/share_view_layout"
+        >
+
+    </View>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/share_layout"
+            android:id="@+id/fedbckk"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:onClick="open_feedback"
+                android:id="@+id/feedback_layout"
+                android:background="@drawable/grad_rec"
+                >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/feedback"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/share_layout"
+            android:background="#fff"
+            android:id="@+id/fedback_view"
+            >
+
+        </View>
+
+
+        <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="80dp"
+       android:layout_below="@id/fedbckk"
+       android:background="@drawable/grad_rec"
+            android:onClick="logout"
+            android:clickable="true"
+           >
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:text="Sign Out"
+           android:textSize="20dp"
+           android:textColor="#fff"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="80dp"
+           />
+
+
+   </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

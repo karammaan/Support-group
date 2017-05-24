@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cartoons"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grad_rec">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/create_group"
+            android:padding="15dp"
+
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/avatar"
+                android:layout_gravity="center"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:textColor="#000"
+                android:background="@null"
+                android:textColorHint="#000"
+                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/username_id"/>
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/create_group"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/mail"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:background="@null"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/email_id"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/create_group"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/users"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Gender"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:background="@null"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/gender_id"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/create_group"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/age"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:background="@null"
+                    android:textColor="#000"
+                    android:inputType="number"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/age_id"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/create_group"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/experance"
+                    android:layout_gravity="center"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/expert_id"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/create_group"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/experance"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Experiance time"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:background="@null"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/experience_id"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/create_group"
+                android:padding="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/password"
+                    android:layout_gravity="center"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textColorHint="#000"
+                    android:textSize="15dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColor="#000"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/password_id"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:text="next"
+                android:padding="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_rect"
+                android:id="@+id/next_button"
+                android:onClick="register"/>
+        </LinearLayout>
+
+</ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
