@@ -6,5 +6,5 @@ package com.tech.karam.demo;
 
 public class Internet_address {
 
-    public static String ip = "www.edselway.com/support_group" ;
+    public static String ip = "192.168.0.15/support_group_php" ;
 }

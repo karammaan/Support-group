@@ -27,8 +27,8 @@ import android.util.Patterns;
 public class expert_signup_details extends AppCompatActivity {
 
     String mobile ;
-    EditText username_et , gender_et , password_et , age_et , email_et, experience_et;
-    Spinner expert_in_et ;
+    EditText username_et , password_et , age_et , email_et, experience_et;
+    Spinner expert_in_et,gender_et  ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class expert_signup_details extends AppCompatActivity {
         mobile= getIntent().getStringExtra("mobile_key");
 
         username_et=(EditText) findViewById(R.id.username_id);
-        gender_et=(EditText) findViewById(R.id.gender_id);
+        gender_et=(Spinner) findViewById(R.id.gender_id);
         password_et=(EditText) findViewById(R.id.password_id);
         age_et=(EditText) findViewById(R.id.age_id);
         experience_et=(EditText) findViewById(R.id.experience_id);
@@ -46,13 +46,14 @@ public class expert_signup_details extends AppCompatActivity {
         expert_in_et=(Spinner)findViewById(R.id.expert_id);
 
         get_groups_names();
+        get_experts_gender();
     }
 
     public void register(View v)
     {
         String username = username_et.getText().toString();
 
-        String gender = gender_et.getText().toString();
+        String gender = gender_et.getSelectedItem().toString();
 
         String password = password_et.getText().toString();
 
@@ -138,7 +139,7 @@ public class expert_signup_details extends AppCompatActivity {
 
                         sp.commit();
 
-                        SharedPreferences.Editor sp2 = getSharedPreferences("user_info", MODE_PRIVATE).edit();
+                        SharedPreferences.Editor sp2 = getSharedPreferences("expert_info", MODE_PRIVATE).edit();
 
                         sp2.clear();
 
@@ -201,6 +202,46 @@ public class expert_signup_details extends AppCompatActivity {
                     ArrayAdapter<String> adapter_spinner = new ArrayAdapter<String>(expert_signup_details.this, android.R.layout.simple_dropdown_item_1line,name_list);
 
                     expert_in_et.setAdapter(adapter_spinner);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        jobreq.setRetryPolicy(new DefaultRetryPolicy(20000 , 2, 2));
+
+        AppController app = new AppController(expert_signup_details.this);
+        app.addToRequestQueue(jobreq);
+    }
+
+    public void get_experts_gender()
+    {
+        JSONObject job = new JSONObject();
+        JsonObjectRequest jobreq = new JsonObjectRequest("http://"+Internet_address.ip+"/get_expert_gender.php", job, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                try {
+                    List<String> name_list = new ArrayList<>();
+
+                    JSONArray jarr = response.getJSONArray("result");
+
+                    for(int i = 0 ; i < jarr.length() ; i++)
+                    {
+                        JSONObject job = jarr.getJSONObject(i);
+                        String name = job.getString("Gender");
+                        name_list.add(name);
+                    }
+                    ArrayAdapter<String> adapter_spinner = new ArrayAdapter<String>(expert_signup_details.this, android.R.layout.simple_dropdown_item_1line,name_list);
+
+                    gender_et.setAdapter(adapter_spinner);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
